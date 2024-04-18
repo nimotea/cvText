@@ -1,0 +1,93 @@
+{
+    "dataBinding": {
+        "dataRoles": [
+            {
+                "name": "values",
+                "displayNameKey": "显示文字",
+                "kind": "attributeOrValue",
+                "options": [
+                    {
+                        "displayNameKey": "数据格式",
+                        "type": "format",
+                        "name": "valueFormat"
+                    }                    
+                ]
+            },
+            {
+                "name" : "tooltip",
+                "displayNameKey" : "提示标签",
+                "kind" : "attributeOrValue",
+                "options" : [
+                    {
+                        "type" : "tooltipContentSetting",
+                        "name" : "tooltipContentSetting",
+                        "displayNameKey" : "提示设置"
+                    }
+                ]
+            }],
+            "dataViewMappings": [
+                {
+                    "plain": {
+                        "required": [
+                            {
+                                "values": {
+                                    "min": 1
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+    },
+    "options": {
+        "visual" : [
+            {
+                "displayName" : "组件设置",
+                "properties" : [
+                    {
+                        "name" : "fontStyle",
+                        "displayName" : "文本字体",
+                        "type" : "TextStyle",
+                        "inheritFrom" : "dashboard.textStyle"
+                    },
+                    {
+                        "name" : "underLine",
+                        "displayName" : "是否显示下划线",
+                        "type" : "Boolean",
+                        "defaultValue" : false
+                    },
+                    {
+                        "name" : "textType",
+                        "displayName" : "文本内容",
+                        "type" : "Enum",
+                        "items" : [
+                            {
+                                "value" : "constant",
+                                "displayName" : "固定文本"
+                            },
+                            {
+                                "value" : "variable",
+                                "displayName" : "绑定字段"
+                            },
+                            {
+                                "value" : "mixText",
+                                "displayName" : "混合文本"
+                            }
+                        ],
+                        "defaultValue" : "constant"
+                    },
+                    {
+                        "name" : "content",
+                        "displayName" : "文本内容",
+                        "type" : "Text"
+                    }
+                ]
+            },
+            {
+                "type": "interaction"
+            }
+        ]
+    },
+    "actions": [],
+    "analysis": []
+}
