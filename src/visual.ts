@@ -16,6 +16,7 @@ export default class Visual extends WynVisual {
     this.dom = div;
     dom.appendChild(div);
     this.dom.style.overflow = "hidden";
+    this.dom.style.cursor = "pointer";
     this.selectionManager = host.selectionService.createSelectionManager();
     this.host = host;
     this.dom.addEventListener("click",this.handle)
